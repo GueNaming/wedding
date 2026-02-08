@@ -10,11 +10,11 @@ export const weddingConfig = {
     },
     bride: {
         name: '손은주',
-        father: '아무개1',
-        mother: '아무개2',
-        phone: '01029986038',
-        fatherPhone: '01029986038',
-        motherPhone: '01029986038',
+        father: '손해영',
+        mother: '이명숙',
+        phone: '01083052668',
+        fatherPhone: '01011111111',
+        motherPhone: '01022222222',
     },
     wedding: {
         date: '2026-04-18T11:10:00+09:00',
@@ -38,13 +38,13 @@ export const weddingConfig = {
     accounts: {
         groom: [
             { bank: '신한은행', accountNumber: '110-123-111119', holder: '장규남' },
-            { bank: '농협', accountNumber: '110-123-456789', holder: '장완식' },
-            { bank: '농협', accountNumber: '110-123-456789', holder: '조성자' },
+            { bank: '농협', accountNumber: '110-123-444444', holder: '장완식' },
+            { bank: '농협', accountNumber: '110-123-3333333', holder: '조성자' },
         ],
         bride: [
-            { bank: '우리은행', accountNumber: '1002-123-456789', holder: '손은주' },
-            { bank: '우리은행', accountNumber: '1002-123-456789', holder: '손은주' },
-            { bank: '우리은행', accountNumber: '1002-123-456789', holder: '손은주' },
+            { bank: '우리은행', accountNumber: '1002-123-5555555', holder: '손은주' },
+            { bank: '우리은행', accountNumber: '1002-123-66666', holder: '손해영' },
+            { bank: '우리은행', accountNumber: '1002-123-77777', holder: '이명숙' },
         ],
     },
     theme: {
