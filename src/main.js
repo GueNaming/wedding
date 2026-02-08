@@ -4,9 +4,13 @@ import { initGallery } from './modules/gallery.js'
 import { initAnimations, initSmoothScroll } from './modules/animations.js'
 import { initAccount } from './modules/account.js'
 import { initMap } from './modules/map.js'
+import { loadWeddingConfig } from './modules/configLoader.js'
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('🚀 Wedding Invitation App Initializing...')
+
+    // 0. Load Configuration & Sync UI
+    loadWeddingConfig()
 
     // 1. Initialize core modules
     initAnimations()

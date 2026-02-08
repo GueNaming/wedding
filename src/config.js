@@ -17,9 +17,9 @@ export const weddingConfig = {
         motherPhone: '01029986038',
     },
     wedding: {
-        date: '2026-04-18T11:30:00+09:00',
+        date: '2026-04-18T11:10:00+09:00',
         dateDisplay: '2026년 4월 18일 토요일',
-        time: '오전 11시 30분',
+        time: '오전 11시 10분',
         venue: {
             name: 'NH송파농협 13층 아모르홀',
             address: '서울특별시 송파구 송파대로 155',
@@ -36,16 +36,16 @@ export const weddingConfig = {
         naver: 'https://map.naver.com/v5/search/NH송파농협/place/13146430',
     },
     accounts: {
-        groom: {
-            bank: '신한은행',
-            accountNumber: '110-123-456789',
-            holder: '장규남',
-        },
-        bride: {
-            bank: '우리은행',
-            accountNumber: '1002-123-456789',
-            holder: '손은주',
-        },
+        groom: [
+            { bank: '신한은행', accountNumber: '110-123-456789', holder: '장규남' },
+            { bank: '농협', accountNumber: '110-123-456789', holder: '장완식' },
+            { bank: '농협', accountNumber: '110-123-456789', holder: '조성자' },
+        ],
+        bride: [
+            { bank: '우리은행', accountNumber: '1002-123-456789', holder: '손은주' },
+            { bank: '우리은행', accountNumber: '1002-123-456789', holder: '손은주' },
+            { bank: '우리은행', accountNumber: '1002-123-456789', holder: '손은주' },
+        ],
     },
     theme: {
         colors: {
