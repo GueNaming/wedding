@@ -1,5 +1,9 @@
 import { weddingConfig } from '../config.js'
-
+// main.js (가장 상단 or map 초기화 전에)
+window.navermap_authFailure = function () {
+    console.error("NAVER MAP auth failed: 서비스 URL(도메인) 등록/권한 확인 필요");
+    // 원하면 사용자 안내 UI도 여기서 띄우기
+};
 export function initMap() {
     console.log('🗺️ Map module initialized')
 
