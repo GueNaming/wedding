@@ -37,7 +37,7 @@ export const weddingConfig = {
     },
     accounts: {
         groom: [
-            { bank: '신한은행', accountNumber: '110-123-456789', holder: '장규남' },
+            { bank: '신한은행', accountNumber: '110-123-111119', holder: '장규남' },
             { bank: '농협', accountNumber: '110-123-456789', holder: '장완식' },
             { bank: '농협', accountNumber: '110-123-456789', holder: '조성자' },
         ],
