@@ -54,7 +54,7 @@ export function initMap() {
         mapContainer.innerHTML = `
             <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; background:#f8f9fa; color:#888; padding:20px; text-align:center;">
                 <i class="fas fa-map-marked-alt" style="font-size:2rem; margin-bottom:10px; color:#ccc;"></i>
-                <p style="font-size:0.85rem;">지도를 불러올 수 없습니다.<br>(API 키 또는 도메인을 확인해주세요)</p>
+                <p style="font-size:0.85rem; line-height:1.5;">지도를 불러올 수 없습니다.<br><strong style="color:#d9534f;">NCP 콘솔에서 'Web Dynamic Map' 서비스가<br>활성화되어 있는지 확인해 주세요.</strong></p>
                 <a href="${weddingConfig.maps.naver}" target="_blank" style="margin-top:10px; font-size:0.75rem; color:var(--color-primary);">네이버 지도로 보기</a>
             </div>
         `
@@ -67,17 +67,21 @@ export function initMap() {
 
     // T-Map URL Scheme for Mobile
     const tmapUrl = `tmap://search?name=${encodeURIComponent(weddingConfig.wedding.venue.name)}&lat=${lat}&lon=${lng}`
-    const tmapWebUrl = `https://tmap.life/${encodeURIComponent(weddingConfig.wedding.venue.name)}`
+    const tmapWebUrl = weddingConfig.maps.tmap
 
     tmapBtn?.addEventListener('click', (e) => {
         e.preventDefault()
         const start = Date.now()
+
+        // Try to open the app first
+        window.location.href = tmapUrl
+
+        // Fallback to web link if app doesn't open
         setTimeout(() => {
             if (Date.now() - start < 2000) {
-                window.location.href = tmapWebUrl
+                window.open(tmapWebUrl, '_blank')
             }
         }, 1500)
-        window.location.href = tmapUrl
     })
 
     // Kakao Map

@@ -31,9 +31,9 @@ export const weddingConfig = {
         },
     },
     maps: {
-        tmap: 'https://tmap.life/NH송파농협',
+        tmap: 'https://apis.openapi.sk.com/tmap/app/routes?name=NH송파농협&lat=37.4916&lon=127.1184',
         kakao: 'https://map.kakao.com/link/map/NH송파농협,37.4916,127.1184',
-        naver: 'https://map.naver.com/v5/search/NH송파농협',
+        naver: 'https://map.naver.com/v5/search/NH송파농협/place/13146430',
     },
     accounts: {
         groom: {
