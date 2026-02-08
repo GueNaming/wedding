@@ -67,7 +67,7 @@ export function loadWeddingConfig() {
         if (weddingConfig.wedding.dateDisplay) {
             const dateParts = weddingConfig.wedding.dateDisplay.split(' ');
             if (dateParts.length >= 3) {
-                setText('calendar-date-display', `${dateParts[0]} ${dateParts[1]} ${dateParts[2]}`)
+                setText('calendar-date-display', `${dateParts[0]} ${dateParts[1]} ${dateParts[2]} ${weddingConfig.wedding.time}`)
             }
         }
 
