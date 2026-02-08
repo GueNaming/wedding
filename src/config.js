@@ -21,9 +21,9 @@ export const weddingConfig = {
         dateDisplay: '2026년 4월 18일 토요일',
         time: '오전 11시 10분',
         venue: {
-            name: 'NH송파농협 13층 아모르홀',
+            name: '더컨벤션 송파문정 아모르홀 13층',
             address: '서울특별시 송파구 송파대로 155',
-            fullAddress: '서울특별시 송파구 송파대로 155 NH송파농협 13층 아모르홀',
+            fullAddress: '서울특별시 송파구 송파대로 155 더컨벤션 송파문정 아모르홀 13층',
             coordinates: {
                 lat: 37.4916, // Approximate for NH Songpa
                 lng: 127.1184,
