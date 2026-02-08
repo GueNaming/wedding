@@ -73,21 +73,30 @@ export function initMap() {
     const tmapUrl = `tmap://search?name=${encodeURIComponent(weddingConfig.wedding.venue.name)}&lat=${lat}&lon=${lng}`
     const tmapWebUrl = weddingConfig.maps.tmap
 
+    function isMobile() {
+        return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    }
+
     tmapBtn?.addEventListener('click', (e) => {
         e.preventDefault();
 
         const name = weddingConfig.wedding.venue.name;
         const tmapAppUrl = `tmap://route?rGoName=${encodeURIComponent(name)}&rGoX=${lng}&rGoY=${lat}`;
-        const fallbackUrl = weddingConfig.maps.tmap; // 웹 티맵 링크(있다면)
+        const tmapWebUrl = weddingConfig.maps.tmap; // 티맵 웹 URL (없으면 네이버/카카오로 대체)
 
-        // 모바일 앱 딥링크 시도
-        const clickedAt = Date.now();
+        // ✅ PC면 앱 스킴 시도 자체를 하지 말고 웹으로
+        if (!isMobile()) {
+            window.open(tmapWebUrl, '_blank', 'noopener');
+            return;
+        }
+
+        // ✅ 모바일: 앱 시도 → 실패하면 웹 폴백
+        const start = Date.now();
         window.location.href = tmapAppUrl;
 
-        // 앱이 없거나(혹은 인앱브라우저가 막으면) 웹으로 폴백
         setTimeout(() => {
-            if (Date.now() - clickedAt < 1800) {
-                window.open(fallbackUrl, '_blank', 'noopener');
+            if (Date.now() - start < 1800) {
+                window.open(tmapWebUrl, '_blank', 'noopener');
             }
         }, 1500);
     });
