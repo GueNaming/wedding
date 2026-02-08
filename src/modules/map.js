@@ -74,19 +74,23 @@ export function initMap() {
     const tmapWebUrl = weddingConfig.maps.tmap
 
     tmapBtn?.addEventListener('click', (e) => {
-        e.preventDefault()
-        const start = Date.now()
+        e.preventDefault();
 
-        // Try to open the app first
-        window.location.href = tmapUrl
+        const name = weddingConfig.wedding.venue.name;
+        const tmapAppUrl = `tmap://route?rGoName=${encodeURIComponent(name)}&rGoX=${lng}&rGoY=${lat}`;
+        const fallbackUrl = weddingConfig.maps.tmap; // 웹 티맵 링크(있다면)
 
-        // Fallback to web link if app doesn't open
+        // 모바일 앱 딥링크 시도
+        const clickedAt = Date.now();
+        window.location.href = tmapAppUrl;
+
+        // 앱이 없거나(혹은 인앱브라우저가 막으면) 웹으로 폴백
         setTimeout(() => {
-            if (Date.now() - start < 2000) {
-                window.open(tmapWebUrl, '_blank')
+            if (Date.now() - clickedAt < 1800) {
+                window.open(fallbackUrl, '_blank', 'noopener');
             }
-        }, 1500)
-    })
+        }, 1500);
+    });
 
     // Kakao Map
     kakaoBtn?.addEventListener('click', (e) => {
