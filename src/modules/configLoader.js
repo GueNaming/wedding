@@ -33,7 +33,7 @@ export function loadWeddingConfig() {
             if (isNaN(dateObj.getTime())) {
                 console.error('❌ Invalid date in weddingConfig:', weddingConfig.wedding.date);
             } else {
-                const formatStr = `${dateObj.getFullYear()}. ${String(dateObj.getMonth() + 1).padStart(2, '0')}. ${String(dateObj.getDate()).padStart(2, '0')} SAT AM ${timeText.replace('오전 ', '')}`
+                const formatStr = `${dateObj.getFullYear()}. ${String(dateObj.getMonth() + 1).padStart(2, '0')}. ${String(dateObj.getDate()).padStart(2, '0')} SAT ${timeText.replace('오전 ', '')}`
                 introInfo.innerHTML = `${formatStr}<br>${weddingConfig.wedding.venue.name}`
             }
         }
