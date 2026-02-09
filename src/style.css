@@ -72,7 +72,8 @@ body {
   width: 100%;
   height: 100%;
   background-image: url('https://www.transparenttextures.com/patterns/paper.png');
-  opacity: 0.15;
+  opacity: 0.03;
+  /* Significantly reduced to avoid visible line/dot patterns */
   pointer-events: none;
   z-index: 100;
 }
@@ -122,13 +123,14 @@ body {
 .couple-photo,
 .main-slide,
 .thumb-item {
-  background: linear-gradient(90deg, #f0f0f0 25%, #f7f7f7 50%, #f0f0f0 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite linear;
+  background-color: var(--color-bg-ivory);
 }
 
 img {
   transition: opacity 0.6s ease-in-out;
+  backface-visibility: hidden;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 /* ===== COMPONENTS ===== */
@@ -176,10 +178,25 @@ img {
 }
 
 .intro-image-wrap img {
+  width: calc(100% + 2px);
+  /* Overscan to prevent edge bleed */
+  height: calc(100% + 2px);
+  margin: -1px;
+  object-fit: cover;
+  /* Removed brightness filter which causes banding/lines in gradients */
+}
+
+/* Cleaner brightness reduction via overlay */
+.intro-image-wrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  filter: brightness(0.9);
+  background: rgba(0, 0, 0, 0.15);
+  /* Replaces filter: brightness(0.9) */
+  z-index: 1;
 }
 
 .intro-content {
