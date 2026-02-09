@@ -798,3 +798,40 @@ img {
     padding: 80px 25px;
   }
 }
+/* Small Device Optimization (iPhone SE, etc.) */
+@media (max-width: 380px) {
+  :root {
+    --spacing-section: 100px;
+  }
+
+  .section {
+    padding: 60px 15px;
+  }
+
+  .intro-names {
+    font-size: 2.22rem !important;
+  }
+
+  .intro-info {
+    font-size: 0.82rem !important;
+    letter-spacing: 0.1em;
+  }
+
+  .section-title {
+    font-size: 1.82rem !important;
+  }
+
+  .greeting-text {
+    font-size: 1.05rem !important;
+    line-height: 2.2;
+  }
+
+  .relation-row {
+    font-size: 0.88rem !important;
+    gap: 4px !important;
+  }
+
+  .relation-type {
+    font-size: 0.72rem !important;
+  }
+}
