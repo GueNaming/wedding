@@ -186,7 +186,7 @@ img {
 
 .section-title {
   font-family: var(--font-serif-ko);
-  font-size: 2.1rem;
+  font-size: 1.6rem;
   font-weight: normal;
   color: var(--color-secondary);
   margin-bottom: 4rem;
@@ -798,6 +798,7 @@ img {
     padding: 80px 25px;
   }
 }
+
 /* Small Device Optimization (iPhone SE, etc.) */
 @media (max-width: 380px) {
   :root {
@@ -818,7 +819,7 @@ img {
   }
 
   .section-title {
-    font-size: 1.82rem !important;
+    font-size: 1.6rem !important;
   }
 
   .greeting-text {
