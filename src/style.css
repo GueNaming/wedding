@@ -187,6 +187,7 @@ img {
   z-index: 2;
   color: var(--color-white);
   text-align: center;
+  bottom: 75px;
 }
 
 .intro-names {
