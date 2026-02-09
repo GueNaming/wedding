@@ -7,33 +7,39 @@
 }
 
 :root {
-  /* Colors - Warm Paper Palette */
-  --color-primary: #8ba4d0;
-  /* Muted Blue */
-  --color-secondary: #4a4a4a;
-  /* Charcoal Text */
-  --color-accent: #f2bb7b;
-  /* Leaf/Gold */
+  /* Colors - Premium Sophisticated Palette */
+  --color-primary: #5b7194;
+  /* Deeper, more sophisticated blue */
+  --color-secondary: #333333;
+  /* Darker charcoal */
+  --color-accent: #c5a47e;
+  /* Soft Champagne Gold */
   --color-bg-ivory: #fdfcf8;
-  /* Paper Background */
-  --color-bg-dark: #1a1a1a;
-  --color-text-main: #444444;
-  --color-text-sub: #8c8c8c;
+  /* Warm Paper Ivory */
+  --color-bg-soft: #f9f8f4;
+  /* Subtle section background */
+  --color-text-main: #4a4a4a;
+  --color-text-sub: #8e8e8e;
   --color-border: #efede7;
   --color-white: #ffffff;
 
   /* Fonts */
-  --font-serif: 'GyeonggiBatang', serif;
+  --font-serif-ko: 'MaruBuri', serif;
+  --font-serif-en: 'Cormorant Garamond', serif;
   --font-sans: 'Pretendard', sans-serif;
 
   /* Layout */
   --max-width: 500px;
-  --spacing-section: 120px;
+  --spacing-section: 60px;
+  /* Increased breathing room */
 }
 
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
 @font-face {
-  font-family: 'GyeonggiBatang';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+  font-family: 'MaruBuri';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/MaruBuri-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -90,10 +96,24 @@ body {
   transform: translateY(0);
 }
 
-/* Floating Petals */
+/* Floating Petals Overlay */
+.petal-container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--max-width);
+  height: 100vh;
+  pointer-events: none;
+  z-index: 50;
+  /* Above backgrounds, below text/buttons for subtlety */
+  overflow: hidden;
+}
+
 .petal {
   position: absolute;
-  z-index: 10;
+  z-index: 50;
   pointer-events: none;
   animation: fall linear forwards;
 }
@@ -103,8 +123,21 @@ body {
     transform: translateY(-10vh) translateX(0) rotate(0deg);
   }
 
+  /* Natural swaying motion */
+  25% {
+    transform: translateY(20vh) translateX(30px) rotate(90deg);
+  }
+
+  50% {
+    transform: translateY(50vh) translateX(-30px) rotate(180deg);
+  }
+
+  75% {
+    transform: translateY(80vh) translateX(30px) rotate(270deg);
+  }
+
   100% {
-    transform: translateY(110vh) translateX(100px) rotate(360deg);
+    transform: translateY(115vh) translateX(0) rotate(360deg);
   }
 }
 
@@ -135,27 +168,48 @@ img {
 
 /* ===== COMPONENTS ===== */
 .section {
-  padding: 100px 40px;
+  padding: var(--spacing-section) 40px;
   text-align: center;
   position: relative;
 }
 
 .section-label {
   display: block;
-  font-family: var(--font-serif);
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  color: var(--color-primary);
-  margin-bottom: 1rem;
+  font-family: var(--font-serif-en);
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  color: var(--color-accent);
+  margin-bottom: 1.2rem;
   text-transform: uppercase;
+  font-weight: 500;
 }
 
 .section-title {
-  font-family: var(--font-serif);
-  font-size: 1.8rem;
+  font-family: var(--font-serif-ko);
+  font-size: 2.1rem;
   font-weight: normal;
   color: var(--color-secondary);
-  margin-bottom: 3.5rem;
+  margin-bottom: 4rem;
+  letter-spacing: -0.02em;
+}
+
+.floral-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 40px 0;
+  color: var(--color-accent);
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+.floral-divider::before,
+.floral-divider::after {
+  content: "";
+  height: 1px;
+  width: 50px;
+  background: linear-gradient(to right, transparent, var(--color-accent), transparent);
 }
 
 /* ===== INTRO SECTION ===== */
@@ -208,25 +262,58 @@ img {
 }
 
 .intro-names {
-  font-family: var(--font-serif);
-  font-size: 2.2rem;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  font-family: var(--font-serif-ko);
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.05em;
 }
 
 .intro-info {
-  font-size: 0.9rem;
-  letter-spacing: 0.1em;
-  line-height: 1.8;
-  opacity: 0.9;
+  font-family: var(--font-serif-en);
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  line-height: 2;
+  opacity: 0.95;
 }
 
 /* ===== GREETING SECTION ===== */
 .greeting-text {
-  font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-family: var(--font-serif-ko);
+  font-size: 1.15rem;
   color: var(--color-text-main);
-  line-height: 2.2;
+  line-height: 2.4;
+  margin-bottom: 4rem;
+  letter-spacing: -0.01em;
+}
+
+.family-relation {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: var(--font-serif-ko);
+  color: var(--color-text-main);
+  padding: 20px 0;
+}
+
+.relation-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.relation-type {
+  font-size: 0.85rem;
+  color: var(--color-text-sub);
+}
+
+.relation-name {
+  font-weight: 500;
+  color: var(--color-primary);
+  /* Accent color for names */
 }
 
 /* ===== COUPLE INFO ===== */
@@ -256,9 +343,10 @@ img {
 }
 
 .couple-name {
-  font-family: var(--font-serif);
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  font-family: var(--font-serif-ko);
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: var(--color-secondary);
 }
 
 .couple-contact-wrap {
@@ -273,14 +361,15 @@ img {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 10px 24px;
+  padding: 12px 28px;
   border: 1px solid var(--color-border);
-  border-radius: 30px;
-  font-size: 0.8rem;
+  border-radius: 40px;
+  font-size: 0.85rem;
   color: var(--color-text-main);
   text-decoration: none;
-  transition: all 0.3s;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   background-color: var(--color-white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
 }
 
 .contact-btn.main {
@@ -363,11 +452,15 @@ img {
   position: absolute;
   bottom: 20px;
   right: 20px;
-  background: rgba(0, 0, 0, 0.3);
-  color: white;
-  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  color: var(--color-secondary);
+  padding: 5px 14px;
   border-radius: 20px;
-  font-size: 0.7rem;
+  font-family: var(--font-serif-en);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .view-all-btn {
@@ -568,14 +661,15 @@ img {
 
 .accordion-header {
   width: 100%;
-  padding: 20px;
+  padding: 22px;
   background: white;
   border: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: var(--font-serif);
-  font-size: 1rem;
+  font-family: var(--font-serif-ko);
+  font-size: 1.05rem;
+  font-weight: 500;
   color: var(--color-secondary);
   cursor: pointer;
 }
@@ -684,12 +778,14 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  font-size: 0.7rem;
+  gap: 6px;
+  font-family: var(--font-serif-ko);
+  font-size: 0.75rem;
   color: var(--color-text-main);
   background: none;
   border: none;
   cursor: pointer;
+  letter-spacing: 0.05em;
 }
 
 .util-btn i {

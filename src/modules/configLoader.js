@@ -38,6 +38,13 @@ export function loadWeddingConfig() {
             }
         }
 
+        // 2-1. Family Relations in Greeting
+        console.log('👪 Syncing family relations...');
+        setText('groom-parents-relation', `${weddingConfig.groom.father} · ${weddingConfig.groom.mother}`)
+        setText('groom-name-relation', weddingConfig.groom.name)
+        setText('bride-parents-relation', `${weddingConfig.bride.father} · ${weddingConfig.bride.mother}`)
+        setText('bride-name-relation', weddingConfig.bride.name)
+
         // 3. Couple Info Section
         console.log('👥 Syncing couple info...');
         setText('groom-name', weddingConfig.groom.name)

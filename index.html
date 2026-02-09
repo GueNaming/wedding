@@ -19,6 +19,7 @@
 </head>
 
 <body>
+  <div class="petal-container"></div>
   <div class="app-container">
     <!-- Intro Section -->
     <header class="intro-section">
@@ -36,6 +37,11 @@
     <section class="section greeting-section">
       <span class="section-label">Invitation Greeting</span>
       <h2 class="section-title">우리, 결혼합니다</h2>
+
+      <div class="floral-divider reveal">
+        <i class="fas fa-seedling"></i>
+      </div>
+
       <div class="greeting-text reveal">
         서로를 이해하고<br>
         아껴주며 한 길을 걸어온 저희가<br>
@@ -46,10 +52,25 @@
         더없는 기쁨으로 간직하겠습니다.
       </div>
 
+      <div class="family-relation reveal">
+        <div class="relation-row">
+          <span id="groom-parents-relation">장완식 · 조성자</span>
+          <span class="relation-type">의 아들</span>
+          <span class="relation-name" id="groom-name-relation">규남</span>
+        </div>
+        <div class="relation-row">
+          <span id="bride-parents-relation">손해영 · 이명숙</span>
+          <span class="relation-type">의 딸</span>
+          <span class="relation-name" id="bride-name-relation">은주</span>
+        </div>
+      </div>
+
+      <div class="floral-divider reveal" style="margin-top: 50px;">
+        <i class="fas fa-seedling"></i>
+      </div>
 
 
     </section>
-
     <!-- Couple Info Section -->
     <!-- <section class="section couple-info-section">
       <span class="section-label">Basic Information</span>
@@ -168,20 +189,27 @@
       </div>
 
       <div class="countdown-wrap reveal" style="margin-top: 4rem;">
-        <div id="countdown-title" style="font-family: var(--font-serif); font-size: 1.1rem; margin-bottom: 2rem;">규남 ❤️
+        <div id="countdown-title"
+          style="font-family: var(--font-serif-ko); font-size: 1.25rem; font-weight: 500; margin-bottom: 2.5rem; letter-spacing: -0.01em;">
+          장규남 ❤️
           은주의 결혼식이 <span id="days-val" style="color: var(--color-primary);">--</span>일 남았습니다.</div>
-        <div style="display: flex; justify-content: center; gap: 20px;">
+        <div style="display: flex; justify-content: center; gap: 25px;">
           <div>
-            <div id="hours-val" style="font-size: 1.4rem;">--</div>
-            <div style="font-size: 0.6rem; color: var(--color-text-sub);">HOUR</div>
+            <div id="hours-val" style="font-family: var(--font-serif-en); font-size: 1.6rem; font-weight: 400;">--</div>
+            <div style="font-size: 0.65rem; color: var(--color-text-sub); letter-spacing: 0.1em; margin-top: 5px;">HOUR
+            </div>
           </div>
           <div>
-            <div id="minutes-val" style="font-size: 1.4rem;">--</div>
-            <div style="font-size: 0.6rem; color: var(--color-text-sub);">MIN</div>
+            <div id="minutes-val" style="font-family: var(--font-serif-en); font-size: 1.6rem; font-weight: 400;">--
+            </div>
+            <div style="font-size: 0.65rem; color: var(--color-text-sub); letter-spacing: 0.1em; margin-top: 5px;">MIN
+            </div>
           </div>
           <div>
-            <div id="seconds-val" style="font-size: 1.4rem;">--</div>
-            <div style="font-size: 0.6rem; color: var(--color-text-sub);">SEC</div>
+            <div id="seconds-val" style="font-family: var(--font-serif-en); font-size: 1.6rem; font-weight: 400;">--
+            </div>
+            <div style="font-size: 0.65rem; color: var(--color-text-sub); letter-spacing: 0.1em; margin-top: 5px;">SEC
+            </div>
           </div>
         </div>
       </div>
@@ -254,11 +282,15 @@
       <span class="section-label">Location Information</span>
       <h2 class="section-title">오시는 길</h2>
 
-      <div class="venue-detail reveal" style="margin-bottom: 2rem;">
-        <div id="venue-name" style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.5rem;">NH송파농협
+      <div class="venue-detail reveal" style="margin-bottom: 2.5rem;">
+        <div id="venue-name"
+          style="font-family: var(--font-serif-ko); font-size: 1.5rem; font-weight: 400; color: var(--color-secondary); margin-bottom: 0.7rem; letter-spacing: -0.01em;">
+          NH송파농협
           13층 아모르홀</div>
-        <div id="venue-address" style="font-size: 0.85rem; color: var(--color-text-sub);">서울특별시 송파구 송파대로 155</div>
-        <div id="venue-tel" style="font-size: 0.85rem; color: var(--color-text-sub); margin-top: 0.3rem;">Tel.
+        <div id="venue-address" style="font-size: 0.9rem; color: var(--color-text-sub);">서울특별시 송파구 송파대로 155</div>
+        <div id="venue-tel"
+          style="font-family: var(--font-serif-en); font-size: 0.9rem; color: var(--color-text-sub); margin-top: 0.5rem; letter-spacing: 0.05em;">
+          Tel.
           02-6418-5000</div>
       </div>
 
