@@ -2,6 +2,7 @@
 export const weddingConfig = {
     groom: {
         name: '장규남',
+        nameEn: 'Gyunam',
         father: '장완식',
         mother: '조성자',
         phone: '01029986038',
@@ -10,6 +11,7 @@ export const weddingConfig = {
     },
     bride: {
         name: '손은주',
+        nameEn: 'Eunju',
         father: '손해영',
         mother: '이명숙',
         phone: '01083052668',

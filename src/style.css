@@ -25,7 +25,14 @@
 
   /* Fonts */
   --font-serif-ko: 'MaruBuri', serif;
-  --font-serif-en: 'Cormorant Garamond', serif;
+  --font-name-ko: 'Nanum Myeongjo', serif;
+  /* New Designer Korean Font */
+  --font-serif-en: 'Cinzel', serif;
+  /* Classic Roman Monumental */
+  --font-serif-accent: 'Cormorant Garamond', serif;
+  /* Editorial Italic */
+  --font-script: 'Pinyon Script', cursive;
+  /* Elegant Signature Calligraphy */
   --font-sans: 'Pretendard', sans-serif;
 
   /* Layout */
@@ -35,7 +42,7 @@
 }
 
 /* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Pinyon+Script&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
 @font-face {
   font-family: 'MaruBuri';
@@ -176,21 +183,36 @@ img {
 .section-label {
   display: block;
   font-family: var(--font-serif-en);
-  font-size: 0.8rem;
-  letter-spacing: 0.3em;
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
   color: var(--color-accent);
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
   text-transform: uppercase;
   font-weight: 500;
+  opacity: 0.8;
 }
 
 .section-title {
   font-family: var(--font-serif-ko);
-  font-size: 1.6rem;
-  font-weight: normal;
+  font-size: 2rem;
+  font-weight: 400;
   color: var(--color-secondary);
-  margin-bottom: 4rem;
-  letter-spacing: -0.02em;
+  margin-bottom: 4.5rem;
+  letter-spacing: -0.01em;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25px;
+  height: 1px;
+  background-color: var(--color-accent);
+  opacity: 0.5;
 }
 
 .floral-divider {
@@ -262,20 +284,25 @@ img {
 }
 
 .intro-names {
-  font-family: var(--font-serif-ko);
-  font-size: 2.6rem;
-  margin-bottom: 2rem;
-  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
-  letter-spacing: 0.05em;
+  font-family: var(--font-name-ko);
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.1em;
+  color: var(--color-white);
+  white-space: nowrap;
 }
 
 .intro-info {
-  font-family: var(--font-serif-ko);
-  font-size: 1rem;
-  font-weight: 300;
-  letter-spacing: 0.15em;
-  line-height: 2;
-  opacity: 0.95;
+  font-family: var(--font-serif-accent);
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  line-height: 2.2;
+  opacity: 1;
+  color: var(--color-white);
 }
 
 /* ===== GREETING SECTION ===== */
@@ -810,12 +837,12 @@ img {
   }
 
   .intro-names {
-    font-size: 2.22rem !important;
+    font-size: 2.1rem !important;
   }
 
   .intro-info {
-    font-size: 0.82rem !important;
-    letter-spacing: 0.1em;
+    font-size: 0.9rem !important;
+    letter-spacing: 0.05em;
   }
 
   .section-title {
@@ -836,26 +863,34 @@ img {
     font-size: 0.72rem !important;
   }
 }
+
 /* Final Polish for iPhone SE (320px) - Overriding wrapping elements */
 @media (max-width: 330px) {
   .intro-names {
     font-size: 2.1rem !important;
+    letter-spacing: 0.05em !important;
+    white-space: nowrap !important;
   }
+
   .intro-info {
     font-size: 0.78rem !important;
     white-space: nowrap;
   }
+
   .section-title {
     font-size: 1.6rem !important;
   }
+
   .greeting-text {
     font-size: 0.95rem !important;
     line-height: 2.1;
   }
+
   .relation-row {
     font-size: 0.85rem !important;
     gap: 3px !important;
   }
+
   .section {
     padding-left: 15px !important;
     padding-right: 15px !important;
