@@ -15,8 +15,8 @@ export const weddingConfig = {
         father: '손해영',
         mother: '이명숙',
         phone: '01083052668',
-        fatherPhone: '01011111111',
-        motherPhone: '01022222222',
+        fatherPhone: '01054772668',
+        motherPhone: '01025202668',
     },
     wedding: {
         date: '2026-04-18T11:10:00+09:00',
@@ -39,9 +39,9 @@ export const weddingConfig = {
     },
     accounts: {
         groom: [
-            { bank: '신한은행', accountNumber: '110-123-111119', holder: '장규남' },
-            { bank: '농협', accountNumber: '110-123-444444', holder: '장완식' },
-            { bank: '농협', accountNumber: '110-123-3333333', holder: '조성자' },
+            { bank: '카카오뱅크', accountNumber: '3333-08-0277772', holder: '장규남' },
+            { bank: '농협', accountNumber: '221087-52-078142', holder: '장완식' },
+            { bank: '농협', accountNumber: '221054-52-154863', holder: '조성자' },
         ],
         bride: [
             { bank: '우리은행', accountNumber: '1002-123-5555555', holder: '손은주' },
