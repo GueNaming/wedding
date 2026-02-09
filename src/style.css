@@ -328,7 +328,8 @@ img {
 
 .main-slide {
   min-width: 100%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1.33;
+  /* 3:4 Aspect Ratio for portrait photos */
   overflow: hidden;
 }
 
@@ -336,6 +337,8 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
+  /* Prioritize faces in the upper-middle area */
   cursor: zoom-in;
 }
 
