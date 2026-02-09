@@ -26,7 +26,7 @@ export function loadWeddingConfig() {
 
         // 2. Intro Section
         console.log('🎨 Syncing intro section...');
-        setText('intro-names', `${weddingConfig.groom.name} & ${weddingConfig.bride.name}`)
+        setText('intro-names', `${weddingConfig.groom.name} <br> ${weddingConfig.bride.name}`)
         const introInfo = document.getElementById('intro-info')
         if (introInfo) {
             const dateObj = new Date(weddingConfig.wedding.date)
