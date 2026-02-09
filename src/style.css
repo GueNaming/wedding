@@ -567,8 +567,8 @@ img {
 
 .lightbox-content {
   width: 100%;
-  max-width: 800px;
-  height: 60vh;
+  height: 90vh;
+  /* Increased from 60vh for a more immersive feel */
   display: flex;
   justify-content: center;
   align-items: center;
