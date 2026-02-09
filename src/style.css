@@ -281,9 +281,9 @@ img {
 /* ===== GREETING SECTION ===== */
 .greeting-text {
   font-family: var(--font-serif-ko);
-  font-size: 1.15rem;
+  font-size: 0.9rem;
   color: var(--color-text-main);
-  line-height: 2.4;
+  line-height: 2.1;
   margin-bottom: 4rem;
   letter-spacing: -0.01em;
 }
@@ -823,8 +823,8 @@ img {
   }
 
   .greeting-text {
-    font-size: 1.05rem !important;
-    line-height: 2.2;
+    font-size: 0.9rem !important;
+    line-height: 2.1;
   }
 
   .relation-row {
