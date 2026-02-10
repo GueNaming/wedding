@@ -45,8 +45,8 @@ export const weddingConfig = {
         ],
         bride: [
             { bank: '우리은행', accountNumber: '1002-123-5555555', holder: '손은주' },
-            { bank: '우리은행', accountNumber: '1002-123-66666', holder: '손해영' },
-            { bank: '우리은행', accountNumber: '1002-123-77777', holder: '이명숙' },
+            { bank: '농협', accountNumber: '737070-52-109123', holder: '손해영' },
+            { bank: '우리은행', accountNumber: '1002-053-552006', holder: '이명숙' },
         ],
     },
     theme: {
