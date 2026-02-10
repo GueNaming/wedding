@@ -80,9 +80,9 @@ export function initMap() {
     tmapBtn?.addEventListener('click', (e) => {
         e.preventDefault();
 
-        const name = weddingConfig.wedding.venue.name;
-        const tmapAppUrl = `tmap://route?rGoName=${encodeURIComponent(name)}&rGoX=${lng}&rGoY=${lat}`;
-        const tmapWebUrl = weddingConfig.maps.tmap; // 티맵 웹 URL (없으면 네이버/카카오로 대체)
+        const address = weddingConfig.wedding.venue.address;
+        const tmapAppUrl = `tmap://search?name=${encodeURIComponent(address)}`;
+        const tmapWebUrl = weddingConfig.maps.tmap;
 
         // ✅ PC면 앱 스킴 시도 자체를 하지 말고 웹으로
         if (!isMobile()) {

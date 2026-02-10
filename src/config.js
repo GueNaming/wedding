@@ -33,9 +33,9 @@ export const weddingConfig = {
         },
     },
     maps: {
-        tmap: 'https://apis.openapi.sk.com/tmap/app/routes?name=NH송파농협&lat=37.4916&lon=127.1184',
-        kakao: 'https://map.kakao.com/link/map/NH송파농협,37.4916,127.1184',
-        naver: 'https://map.naver.com/v5/search/NH송파농협/place/13146430',
+        tmap: 'https://map.tmap.co.kr/main.do#search/all/서울특별시%20송파구%20송파대로%20155/1',
+        kakao: 'https://map.kakao.com/link/search/서울특별시%20송파구%20송파대로%20155',
+        naver: 'https://map.naver.com/v5/search/서울특별시%20송파구%20송파대로%20155',
     },
     accounts: {
         groom: [
