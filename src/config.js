@@ -27,8 +27,8 @@ export const weddingConfig = {
             address: '서울특별시 송파구 송파대로 155',
             fullAddress: '서울특별시 송파구 송파대로 155 더컨벤션 송파문정 아모르홀 13층',
             coordinates: {
-                lat: 37.4916, // Approximate for NH Songpa
-                lng: 127.1184,
+                lat: 37.4839844,
+                lng: 127.1227793,
             },
         },
     },
