@@ -39,14 +39,14 @@ export const weddingConfig = {
     },
     accounts: {
         groom: [
-            { bank: '카카오뱅크', accountNumber: '3333-08-0277772', holder: '장규남' },
             { bank: '농협', accountNumber: '221087-52-078142', holder: '장완식' },
             { bank: '농협', accountNumber: '221054-52-154863', holder: '조성자' },
+            { bank: '카카오뱅크', accountNumber: '3333-08-0277772', holder: '장규남' },
         ],
         bride: [
-            { bank: '우리은행', accountNumber: '1002-123-5555555', holder: '손은주' },
             { bank: '농협', accountNumber: '737070-52-109123', holder: '손해영' },
             { bank: '우리은행', accountNumber: '1002-053-552006', holder: '이명숙' },
+            { bank: '카카오뱅크', accountNumber: '3333-01-2428883', holder: '손은주' },
         ],
     },
     theme: {
