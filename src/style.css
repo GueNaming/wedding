@@ -742,6 +742,15 @@ img {
   font-size: 0.8rem;
   color: var(--color-text-sub);
   margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bank-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
 }
 
 .account-text .number {
