@@ -133,9 +133,9 @@ function updateMeta(property, content) {
 
 function getBankIcon(bankName) {
     const icons = {
-        '농협': 'https://upload.wikimedia.org/wikipedia/commons/7/75/Logo_of_Nonghyup.svg',
-        '우리은행': 'https://upload.wikimedia.org/wikipedia/commons/8/87/Logo_of_Woori_Bank.svg',
-        '카카오뱅크': 'https://upload.wikimedia.org/wikipedia/commons/b/b5/KakaoBank_Logo.svg'
+        '농협': '/images/logos/nh_symbol_refined.png',
+        '우리은행': '/images/logos/woori_logo.png',
+        '카카오뱅크': '/images/logos/kakao_logo_yellow.svg'
     };
     return icons[bankName] || '';
 }
@@ -164,7 +164,7 @@ function renderAccounts(containerId, accounts) {
         <div class="account-item-inner">
             <div class="account-text">
                 <span class="bank">
-                    ${iconUrl ? `<img src="${iconUrl}" class="bank-icon" alt="${acc.bank}">` : ''}
+                    ${iconUrl ? `<img src="${iconUrl}" class="bank-logo-img" alt="${acc.bank}">` : ''}
                     ${acc.bank}
                 </span>
                 <span class="number">${acc.accountNumber}</span>

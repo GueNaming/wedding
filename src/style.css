@@ -744,13 +744,16 @@ img {
   margin-bottom: 2px;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
-.bank-icon {
-  width: 16px;
-  height: 16px;
+.bank-logo-img {
+  height: 26px;
+  width: auto;
+  max-width: 32px;
   object-fit: contain;
+  display: inline-block;
+  margin-right: 4px;
 }
 
 .account-text .number {
