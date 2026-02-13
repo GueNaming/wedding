@@ -284,7 +284,8 @@ img {
 }
 
 .intro-names {
-  font-family: var(--font-name-ko);
+  /* font-family: var(--font-name-ko); */
+  font-family: var(--font-serif-accent);
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
