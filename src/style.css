@@ -1,5 +1,5 @@
 /* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Pinyon+Script&family=Nanum+Myeongjo:wght@400;700;800&family=Diphylleia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Pinyon+Script&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
 /* ===== BASE STYLES & RESET ===== */
 * {
@@ -28,7 +28,7 @@
 
   /* Fonts */
   --font-serif-ko: 'MaruBuri', serif;
-  --font-name-ko: 'Diphylleia', serif;
+  --font-name-ko: 'Nanum Myeongjo', serif;
   /* New Designer Korean Font */
   --font-serif-en: 'Cinzel', serif;
   /* Classic Roman Monumental */
@@ -285,10 +285,9 @@ img {
 }
 
 .intro-names {
-  /* font-family: var(--font-name-ko); */
-  font-family: var(--font-serif-accent);
+  font-family: var(--font-serif-ko);
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: 1.5rem;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   letter-spacing: 0.1em;
