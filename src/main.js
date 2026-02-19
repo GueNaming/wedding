@@ -4,6 +4,7 @@ import { initGallery } from './modules/gallery.js'
 import { initAnimations, initSmoothScroll } from './modules/animations.js'
 import { initAccount } from './modules/account.js'
 import { initMap } from './modules/map.js'
+import { initMusicPlayer } from './modules/music.js'
 import { loadWeddingConfig } from './modules/configLoader.js'
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCountdown(weddingConfig.wedding.date)
     initAccount()
     initMap()
+    initMusicPlayer()
 
     // 2. Utility Bar Interaction
     initUtilityBar()
